@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "z.Core.Socket", "Lib\z.Core.Socket\z.Core.Socket.csproj", "{BC87766C-F5E6-4E99-A7AC-2B6A470271C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleWebApp", "Samples\SampleWebApp\SampleWebApp.csproj", "{B8509A9D-B1C2-4C39-88D3-CD835635309B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{2DDF7E1C-50D7-477A-B259-AE980A86B8E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC87766C-F5E6-4E99-A7AC-2B6A470271C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC87766C-F5E6-4E99-A7AC-2B6A470271C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC87766C-F5E6-4E99-A7AC-2B6A470271C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC87766C-F5E6-4E99-A7AC-2B6A470271C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8509A9D-B1C2-4C39-88D3-CD835635309B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8509A9D-B1C2-4C39-88D3-CD835635309B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8509A9D-B1C2-4C39-88D3-CD835635309B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8509A9D-B1C2-4C39-88D3-CD835635309B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B8509A9D-B1C2-4C39-88D3-CD835635309B} = {2DDF7E1C-50D7-477A-B259-AE980A86B8E9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88457629-FBC4-4F82-82EA-A216F9841521}
+	EndGlobalSection
+EndGlobal
