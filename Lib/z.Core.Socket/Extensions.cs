@@ -19,8 +19,18 @@ namespace z.Core.Socket
             return app.Map(path, (_app) => _app.UseMiddleware<CoreSocketMiddleWare>(handler));
         }
 
-        public static IApplicationBuilder UseCoreSocket(this IApplicationBuilder app, IServiceProvider serviceProvider)
+        public static IApplicationBuilder UseCoreSocket(this IApplicationBuilder app, IServiceProvider serviceProvider, Action<WebSocketOptions> opt = null)
         {
+            var wsOptions = new WebSocketOptions()
+            {
+                KeepAliveInterval = TimeSpan.FromSeconds(60),
+                ReceiveBufferSize = 4 * 1024
+            };
+
+            opt?.Invoke(wsOptions);
+
+            app.UseWebSockets(wsOptions);
+
             foreach (var type in serviceProvider.GetServices<ICoreSocket>())
             {
                 var attr = type.GetType().GetCustomAttributes(true).SingleOrDefault(x => x.GetType() == typeof(CoreSocketAttribute)) as CoreSocketAttribute;

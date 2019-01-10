@@ -12,9 +12,9 @@ namespace z.Core.Socket
 
         public CoreSocketAttribute() { }
 
-        public CoreSocketAttribute(PathString path)
+        public CoreSocketAttribute(string path)
         {
-            this.Path = $"/{path.Value.TrimStart('/')}";
+            this.Path = $"/{path.TrimStart('/')}";
         }
 
     }
